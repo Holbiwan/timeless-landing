@@ -870,3 +870,20 @@ h4 { font-size: 1.5rem; }
     transform: translateY(0);
   }
 }
+
+/* par défaut (desktop) */
+.about-image {
+  width: 200px;
+  height: auto;
+  border-radius: 12px; /* optionnel */
+}
+
+/* sur mobile (<= 640px) : élargir un peu */
+@media (max-width: 640px) {
+  .about-image {
+    width: 70vw;     /* 70% de la largeur écran */
+    max-width: 300px;/* évite trop grand */
+    min-width: 180px;/* évite trop petit */
+    height: auto;
+  }
+}
