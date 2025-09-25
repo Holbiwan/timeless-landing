@@ -22,21 +22,15 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
     
-    // Smooth scrolling for anchor links
-    const anchors = document.querySelectorAll('a[href^="#"]');
+    // Smooth scrolling for anchor links - ONLY for internal page anchors
+    const anchors = document.querySelectorAll('a[href^="#"]:not([href="#"])');
     anchors.forEach(anchor => {
         anchor.addEventListener('click', function(e) {
             const targetId = this.getAttribute('href');
-            
-            // Skip empty anchors or just "#"
-            if (!targetId || targetId === '#') {
-                return;
-            }
-            
-            e.preventDefault();
             const targetElement = document.querySelector(targetId);
             
             if (targetElement) {
+                e.preventDefault(); // Only prevent default if we have a target
                 const offsetTop = targetElement.offsetTop - 80; // Account for fixed navbar
                 window.scrollTo({
                     top: offsetTop,
