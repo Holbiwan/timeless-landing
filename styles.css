@@ -1,4 +1,5 @@
 /* Timeless Landing Page Styles */
+/* Enhanced for Holberton Portfolio Project Requirements */
 /* Royal Blue, Gold Yellow, Vibrant Red Theme */
 
 :root {
@@ -124,7 +125,7 @@ h4 { font-size: 1.5rem; }
 .nav-container {
   max-width: 1200px;
   margin: 0 auto;
-  padding: 0 20px;
+  padding: 0.5rem 20px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -137,12 +138,12 @@ h4 { font-size: 1.5rem; }
 }
 
 .logo-img {
-  height: 60px;
+  height: 120px;
   width: auto;
 }
 
 .logo-text {
-  font-size: 1.5rem;
+  font-size: 1.8rem;
   font-weight: 700;
   color: var(--royal-blue);
 }
@@ -261,10 +262,10 @@ h4 { font-size: 1.5rem; }
 
 .phone-mockup {
   position: relative;
-  width: 300px;
-  height: 600px;
+  width: 216px;
+  height: 432px;
   background: var(--white);
-  border-radius: 30px;
+  border-radius: 22px;
   padding: 20px;
   box-shadow: var(--shadow-xl);
   overflow: hidden;
@@ -656,11 +657,69 @@ h4 { font-size: 1.5rem; }
   border-color: var(--royal-blue);
 }
 
+/* Social Section */
+.social-section {
+  text-align: center;
+  margin: 2rem 0;
+  padding: 2rem 0;
+  border-top: 1px solid #e5e7eb;
+}
+
+.social-section h3 {
+  font-size: 1.5rem;
+  margin-bottom: 1.5rem;
+  color: var(--text-primary);
+}
+
+.social-links {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+}
+
+.social-link {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 1rem;
+  background: linear-gradient(135deg, #3b82f6 0%, #1d4ed8 100%);
+  color: white;
+  text-decoration: none;
+  border-radius: 16px;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 12px rgba(59, 130, 246, 0.3);
+  border: 2px solid #3b82f6;
+  min-width: 80px;
+}
+
+.social-link:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(59, 130, 246, 0.4);
+  background: linear-gradient(135deg, #2563eb 0%, #1d4ed8 100%);
+  border-color: #2563eb;
+}
+
+.social-link i {
+  font-size: 1.2rem;
+  color: white;
+}
+
+.social-link span {
+  color: white;
+  font-weight: 500;
+  font-size: 0.75rem;
+  text-align: center;
+}
+
 /* Footer */
 .footer {
-  background: var(--text-primary);
-  color: var(--white);
-  padding: 3rem 0 1rem;
+  background: #f8fafc;
+  color: var(--text-primary);
+  padding: 2rem 0 1rem;
+  border-top: 1px solid #e2e8f0;
 }
 
 .footer-content {
@@ -678,23 +737,23 @@ h4 { font-size: 1.5rem; }
 }
 
 .footer-logo-img {
-  height: 30px;
+  height: 60px;
   width: auto;
 }
 
 .footer-logo-text {
   font-size: 1.3rem;
   font-weight: 700;
-  color: var(--bright-yellow);
+  color: #3b82f6;
 }
 
 .footer-description {
-  color: rgba(255, 255, 255, 0.8);
+  color: #64748b;
   line-height: 1.6;
 }
 
 .footer-section h4 {
-  color: var(--bright-yellow);
+  color: #3b82f6;
   margin-bottom: 1rem;
 }
 
@@ -707,20 +766,20 @@ h4 { font-size: 1.5rem; }
 }
 
 .footer-section a {
-  color: rgba(255, 255, 255, 0.8);
+  color: #64748b;
   text-decoration: none;
   transition: color 0.3s ease;
 }
 
 .footer-section a:hover {
-  color: var(--bright-yellow);
+  color: #3b82f6;
 }
 
 .footer-bottom {
-  border-top: 1px solid rgba(255, 255, 255, 0.1);
-  padding-top: 2rem;
+  border-top: 1px solid #e2e8f0;
+  padding-top: 1.5rem;
   text-align: center;
-  color: rgba(255, 255, 255, 0.6);
+  color: #64748b;
 }
 
 /* Responsive Design */
@@ -737,8 +796,8 @@ h4 { font-size: 1.5rem; }
   }
   
   .phone-mockup {
-    width: 250px;
-    height: 500px;
+    width: 192px;
+    height: 384px;
   }
   
   .features-grid {
@@ -794,7 +853,21 @@ h4 { font-size: 1.5rem; }
   }
   
   .hero-stats {
+    gap: 1rem;
     justify-content: space-between;
+  }
+  
+  .stat {
+    flex: 1;
+    min-width: 0;
+  }
+  
+  .stat-number {
+    font-size: 1rem;
+  }
+  
+  .stat-label {
+    font-size: 0.75rem;
   }
   
   .features-grid {
@@ -822,12 +895,33 @@ h4 { font-size: 1.5rem; }
   }
   
   .hero-title {
-    font-size: 2rem;
+    font-size: 1.8rem;
+    line-height: 1.2;
+  }
+  
+  .hero-subtitle {
+    font-size: 0.9rem;
+    line-height: 1.4;
+  }
+  
+  .hero-stats {
+    gap: 0.5rem;
+    margin-top: 1.5rem;
+  }
+  
+  .hero-buttons {
+    gap: 0.75rem;
+    margin-bottom: 1.5rem;
+  }
+  
+  .btn {
+    padding: 0.75rem 1.5rem;
+    font-size: 0.9rem;
   }
   
   .phone-mockup {
-    width: 200px;
-    height: 400px;
+    width: 168px;
+    height: 336px;
   }
   
   .floating-cards {
@@ -871,19 +965,173 @@ h4 { font-size: 1.5rem; }
   }
 }
 
-/* par défaut (desktop) */
-.about-image {
-  width: 200px;
-  height: auto;
-  border-radius: 12px; /* optionnel */
+/* Enhanced Feature Cards for Portfolio Requirements */
+.feature-card.main-feature {
+  padding: 2rem;
+  border-radius: 12px;
+  background: var(--white);
+  box-shadow: var(--shadow-lg);
+  border: 2px solid var(--border);
+  transition: all 0.3s ease;
+  max-width: 350px;
+  margin: 0 auto;
 }
 
-/* sur mobile (<= 640px) : élargir un peu */
-@media (max-width: 640px) {
-  .about-image {
-    width: 70vw;     /* 70% de la largeur écran */
-    max-width: 300px;/* évite trop grand */
-    min-width: 180px;/* évite trop petit */
-    height: auto;
+.feature-card.main-feature:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--shadow-xl);
+  border-color: var(--royal-blue);
+}
+
+.feature-image {
+  width: 100%;
+  height: 200px;
+  border-radius: 8px;
+  overflow: hidden;
+  margin-bottom: 1.5rem;
+  border: 1px solid var(--border);
+}
+
+.feature-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+/* Social Profiles Links */
+.team-links {
+  margin-top: 2rem;
+  padding-top: 2rem;
+  border-top: 1px solid var(--border);
+}
+
+.team-links h3 {
+  color: var(--royal-blue);
+  margin-bottom: 1rem;
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+
+.social-profiles {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.profile-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.75rem 1.5rem;
+  background: var(--royal-blue);
+  color: var(--white);
+  text-decoration: none;
+  border-radius: 8px;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  font-size: 0.9rem;
+}
+
+.profile-link:hover {
+  background: var(--vibrant-red);
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-md);
+}
+
+.project-link {
+  margin-top: 1rem;
+}
+
+.repo-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.75rem 1.5rem;
+  background: var(--bright-yellow);
+  color: var(--royal-blue);
+  text-decoration: none;
+  border-radius: 8px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  border: 2px solid var(--royal-blue);
+}
+
+.repo-link:hover {
+  background: var(--royal-blue);
+  color: var(--white);
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-md);
+}
+
+/* QR Code Section */
+.qr-code-section {
+  margin: 2rem 0;
+  text-align: center;
+  padding: 2rem;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 15px;
+  backdrop-filter: blur(10px);
+}
+
+.qr-code-section h3 {
+  color: var(--white);
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+  font-weight: 600;
+}
+
+.qr-code-section p {
+  color: rgba(255, 255, 255, 0.8);
+  margin-bottom: 1.5rem;
+  font-size: 1rem;
+}
+
+.qr-code-container {
+  display: inline-block;
+  background: var(--white);
+  padding: 1rem;
+  border-radius: 12px;
+  box-shadow: var(--shadow-lg);
+  transition: transform 0.3s ease;
+}
+
+.qr-code-container:hover {
+  transform: scale(1.05);
+}
+
+.qr-code {
+  width: 150px;
+  height: 150px;
+  border-radius: 8px;
+  display: block;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .social-profiles {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+  
+  .profile-link,
+  .repo-link {
+    justify-content: center;
+    text-align: center;
+  }
+  
+  .feature-image {
+    height: 180px;
+  }
+  
+  .qr-code-section {
+    margin: 1.5rem 0;
+    padding: 1.5rem;
+  }
+  
+  .qr-code {
+    width: 120px;
+    height: 120px;
   }
 }
