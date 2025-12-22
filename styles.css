@@ -194,7 +194,7 @@ h4 { font-size: 1.5rem; }
   align-items: center;
   background: var(--gradient-hero);
   overflow: hidden;
-  padding-top: 80px;
+  padding-top: 140px;
 }
 
 .hero-container {
@@ -264,11 +264,13 @@ h4 { font-size: 1.5rem; }
   position: relative;
   width: 300px;
   height: 600px;
-  background: var(--white);
-  border-radius: 30px;
-  padding: 20px;
-  box-shadow: var(--shadow-xl);
+  background: transparent; /* Remove background */
+  border-radius: 0; /* Remove border radius */
+  padding: 0; /* Remove padding */
+  box-shadow: none; /* No shadow */
+  border: none; /* No border */
   overflow: hidden;
+  transform: translateY(-15px); /* Move phone up slightly for better balance */
 }
 
 .app-screenshot {
