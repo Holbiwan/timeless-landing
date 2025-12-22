@@ -6,7 +6,7 @@
   /* Primary Colors - Timeless Palette */
   --royal-blue: #1E2A78;
   --bright-yellow: #FFD700;
-  --vibrant-red: #DC2626;
+  --vibrant-red: #D2691E;
   
   /* Supporting Colors */
   --white: #FFFFFF;
@@ -100,9 +100,9 @@ h4 { font-size: 1.5rem; }
 }
 
 .btn-secondary {
-  background: transparent;
+  background: var(--white);
   color: var(--royal-blue);
-  border: 2px solid var(--royal-blue);
+  border: 2px solid var(--white);
 }
 
 .btn-secondary:hover {
@@ -245,7 +245,7 @@ h4 { font-size: 1.5rem; }
   display: block;
   font-size: 2rem;
   font-weight: 700;
-  color: var(--royal-blue);
+  color: var(--bright-yellow);
 }
 
 .stat-label {

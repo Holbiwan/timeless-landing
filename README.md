@@ -3,7 +3,7 @@
 
 <p align="center">
   <a href="https://holbiwan.github.io/timeless-landing/" target="_blank">
-    <img src="https://img.shields.io/badge/🌐_View_Landing_Page-blue?style=for-the-badge&logoColor=white" alt="View Landing Page">
+    <img src="assets/screenshots/search_job.jpg" width="400" alt="View Landing Page">
   </a>
 </p>
 
