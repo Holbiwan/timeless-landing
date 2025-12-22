@@ -64,7 +64,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 h1 { font-size: 3rem; }
-h2 { font-size: 2.5rem; }
+h2 { font-size: 1.8rem; }
 h3 { font-size: 2rem; }
 h4 { font-size: 1.5rem; }
 
@@ -379,7 +379,7 @@ h4 { font-size: 1.5rem; }
 }
 
 .section-title {
-  font-size: 2.5rem;
+  font-size: 1.8rem;
   font-weight: 700;
   color: var(--text-primary);
   margin-bottom: 1rem;
@@ -534,7 +534,7 @@ h4 { font-size: 1.5rem; }
 
 /* Download Section */
 .download {
-  padding: 3rem 0 1.5rem;
+  padding: 1.5rem 0 1.5rem;
   background: var(--royal-blue);
   text-align: center;
 }
@@ -661,8 +661,12 @@ h4 { font-size: 1.5rem; }
 
 /* Contact Section */
 .contact {
-  padding: 6rem 0;
+  padding: 2rem 0;
   background: var(--white);
+}
+
+.contact .section-header {
+  margin-bottom: 2rem;
 }
 
 .contact-content {
@@ -862,7 +866,7 @@ h4 { font-size: 1.5rem; }
   }
   
   .section-title {
-    font-size: 2rem;
+    font-size: 1.5rem;
   }
   
   .hero-buttons {
