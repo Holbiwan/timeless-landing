@@ -1,6 +1,11 @@
 
 ## Here is the landing page of my project called "Timeless"
-https://holbiwan.github.io/timeless-landing/
+
+<p align="center">
+  <a href="https://holbiwan.github.io/timeless-landing/" target="_blank">
+    <img src="https://img.shields.io/badge/🌐_View_Landing_Page-blue?style=for-the-badge&logoColor=white" alt="View Landing Page">
+  </a>
+</p>
 
 
 ## 🎬 Demo (click on image below)
