@@ -524,12 +524,17 @@ h4 { font-size: 1.5rem; }
   font-size: 1.2rem;
 }
 
-.about-image {
+.about-gif {
   width: 100%;
   height: 400px;
   object-fit: cover;
   border-radius: 12px;
   box-shadow: var(--shadow-lg);
+  transition: transform 0.3s ease;
+}
+
+.about-gif:hover {
+  transform: scale(1.02);
 }
 
 /* Download Section */
