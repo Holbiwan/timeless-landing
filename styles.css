@@ -549,6 +549,32 @@ h4 { font-size: 1.5rem; }
   margin: 2rem 0;
 }
 
+.local-app-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 1rem 2rem;
+  background: var(--bright-yellow);
+  color: var(--royal-blue);
+  text-decoration: none;
+  border-radius: 12px;
+  font-weight: 600;
+  font-size: 1.1rem;
+  transition: all 0.3s ease;
+  box-shadow: var(--shadow-lg);
+  border: 2px solid var(--royal-blue);
+}
+
+.local-app-btn:hover {
+  background: var(--white);
+  transform: translateY(-3px);
+  box-shadow: var(--shadow-xl);
+}
+
+.local-app-btn i {
+  font-size: 1.2rem;
+}
+
 .download-btn img {
   height: 60px;
   transition: transform 0.3s ease;
@@ -561,26 +587,74 @@ h4 { font-size: 1.5rem; }
 .social-links {
   display: flex;
   justify-content: center;
-  gap: 1rem;
-  margin-top: 2rem;
+  gap: 1.5rem;
+  margin-top: 3rem;
+  flex-wrap: wrap;
 }
 
 .social-link {
-  width: 50px;
-  height: 50px;
+  width: 60px;
+  height: 60px;
   background: rgba(255, 255, 255, 0.1);
-  border-radius: 50%;
+  border-radius: 16px;
   display: flex;
   align-items: center;
   justify-content: center;
   color: var(--white);
   text-decoration: none;
-  transition: background 0.3s ease;
+  transition: all 0.3s ease;
+  font-size: 1.4rem;
+  backdrop-filter: blur(10px);
+  border: 2px solid rgba(255, 255, 255, 0.2);
+  position: relative;
+  overflow: hidden;
+}
+
+.social-link::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 215, 0, 0.3), transparent);
+  transition: left 0.6s ease;
+}
+
+.social-link:hover::before {
+  left: 100%;
 }
 
 .social-link:hover {
   background: var(--bright-yellow);
   color: var(--royal-blue);
+  transform: translateY(-5px) scale(1.1);
+  box-shadow: 0 15px 35px rgba(255, 215, 0, 0.4);
+  border-color: var(--royal-blue);
+}
+
+.social-link:nth-child(1):hover {
+  background: #0077b5; /* LinkedIn blue */
+  color: var(--white);
+  box-shadow: 0 15px 35px rgba(0, 119, 181, 0.4);
+}
+
+.social-link:nth-child(2):hover {
+  background: #000000; /* X (Twitter) black */
+  color: var(--white);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.4);
+}
+
+.social-link:nth-child(3):hover {
+  background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%); /* Instagram gradient */
+  color: var(--white);
+  box-shadow: 0 15px 35px rgba(188, 24, 136, 0.4);
+}
+
+.social-link:nth-child(4):hover {
+  background: #1877f2; /* Facebook blue */
+  color: var(--white);
+  box-shadow: 0 15px 35px rgba(24, 119, 242, 0.4);
 }
 
 /* Contact Section */
@@ -811,6 +885,17 @@ h4 { font-size: 1.5rem; }
     align-items: center;
   }
   
+  .social-links {
+    gap: 1rem;
+    margin-top: 2rem;
+  }
+  
+  .social-link {
+    width: 55px;
+    height: 55px;
+    font-size: 1.2rem;
+  }
+  
   .footer-content {
     grid-template-columns: 1fr;
     gap: 2rem;
@@ -875,19 +960,64 @@ h4 { font-size: 1.5rem; }
 /* Enhanced Feature Cards for Portfolio Requirements */
 .feature-card.main-feature {
   padding: 2rem;
-  border-radius: 12px;
+  border-radius: 16px;
   background: var(--white);
   box-shadow: var(--shadow-lg);
   border: 2px solid var(--border);
   transition: all 0.3s ease;
-  max-width: 350px;
+  max-width: 380px;
   margin: 0 auto;
+  position: relative;
+  overflow: hidden;
+}
+
+.feature-card.main-feature::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 215, 0, 0.1), transparent);
+  transition: left 0.6s ease;
 }
 
 .feature-card.main-feature:hover {
-  transform: translateY(-5px);
-  box-shadow: var(--shadow-xl);
+  transform: translateY(-8px);
+  box-shadow: 0 25px 50px -12px rgba(30, 42, 120, 0.25);
   border-color: var(--royal-blue);
+}
+
+.feature-card.main-feature:hover::before {
+  left: 100%;
+}
+
+/* Clickable card styles */
+.clickable-card {
+  cursor: pointer;
+  position: relative;
+}
+
+.clickable-card::after {
+  content: '🔍 Click to enlarge';
+  position: absolute;
+  bottom: 10px;
+  right: 15px;
+  background: var(--royal-blue);
+  color: var(--white);
+  padding: 4px 8px;
+  border-radius: 12px;
+  font-size: 0.75rem;
+  opacity: 0;
+  transform: translateY(10px);
+  transition: all 0.3s ease;
+  pointer-events: none;
+  font-weight: 500;
+}
+
+.clickable-card:hover::after {
+  opacity: 1;
+  transform: translateY(0);
 }
 
 .feature-image {
@@ -987,5 +1117,119 @@ h4 { font-size: 1.5rem; }
   
   .feature-image {
     height: 180px;
+  }
+}
+
+/* Modal Styles for Screenshot Enlargement */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 2000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.9);
+  backdrop-filter: blur(5px);
+  animation: fadeIn 0.3s ease;
+}
+
+.modal.active {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.modal-content {
+  position: relative;
+  max-width: 90%;
+  max-height: 90%;
+  margin: auto;
+  animation: zoomIn 0.3s ease;
+}
+
+.modal-image {
+  width: 100%;
+  height: auto;
+  border-radius: 12px;
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+  max-height: 90vh;
+  object-fit: contain;
+}
+
+.modal-close {
+  position: absolute;
+  top: -50px;
+  right: 0;
+  color: var(--white);
+  font-size: 2rem;
+  font-weight: bold;
+  cursor: pointer;
+  background: rgba(220, 38, 38, 0.8);
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+  border: none;
+}
+
+.modal-close:hover {
+  background: var(--vibrant-red);
+  transform: scale(1.1);
+}
+
+.modal-caption {
+  position: absolute;
+  bottom: -60px;
+  left: 0;
+  right: 0;
+  text-align: center;
+  color: var(--white);
+  font-size: 1.1rem;
+  font-weight: 500;
+  background: rgba(30, 42, 120, 0.8);
+  padding: 10px 20px;
+  border-radius: 25px;
+  backdrop-filter: blur(10px);
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes zoomIn {
+  from {
+    opacity: 0;
+    transform: scale(0.8);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* Mobile responsiveness for modal */
+@media (max-width: 768px) {
+  .modal-close {
+    top: -40px;
+    right: 10px;
+    width: 35px;
+    height: 35px;
+    font-size: 1.5rem;
+  }
+  
+  .modal-caption {
+    bottom: -50px;
+    font-size: 1rem;
+    padding: 8px 16px;
+  }
+  
+  .modal-content {
+    max-width: 95%;
+    max-height: 85%;
   }
 }

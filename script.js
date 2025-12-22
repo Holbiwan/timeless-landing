@@ -249,16 +249,75 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
     
-    // Feature card hover effects
+    // Feature card hover effects and click functionality
     const featureCards = document.querySelectorAll('.feature-card');
     featureCards.forEach(card => {
         card.addEventListener('mouseenter', function() {
-            this.style.transform = 'translateY(-10px) scale(1.02)';
+            if (!this.classList.contains('clickable-card')) {
+                this.style.transform = 'translateY(-10px) scale(1.02)';
+            }
+        });
+        
+        card.addEventListener('mouseleave', function() {
+            if (!this.classList.contains('clickable-card')) {
+                this.style.transform = 'translateY(0) scale(1)';
+            }
+        });
+    });
+
+    // Screenshot modal functionality
+    const modal = document.getElementById('screenshotModal');
+    const modalImage = document.getElementById('modalImage');
+    const modalCaption = document.getElementById('modalCaption');
+    const modalClose = document.querySelector('.modal-close');
+
+    // Clickable cards functionality
+    const clickableCards = document.querySelectorAll('.clickable-card');
+    clickableCards.forEach(card => {
+        card.addEventListener('click', function() {
+            const screenshotPath = this.getAttribute('data-screenshot');
+            const cardTitle = this.querySelector('.feature-title').textContent;
+            const cardDescription = this.querySelector('.feature-description').textContent;
+            
+            if (screenshotPath) {
+                modalImage.src = screenshotPath;
+                modalImage.alt = `${cardTitle} screenshot`;
+                modalCaption.textContent = `${cardTitle} - ${cardDescription}`;
+                modal.classList.add('active');
+                document.body.style.overflow = 'hidden'; // Prevent background scrolling
+            }
+        });
+        
+        // Add visual feedback for clickable cards
+        card.addEventListener('mouseenter', function() {
+            this.style.transform = 'translateY(-8px) scale(1.02)';
         });
         
         card.addEventListener('mouseleave', function() {
             this.style.transform = 'translateY(0) scale(1)';
         });
+    });
+
+    // Modal close functionality
+    function closeModal() {
+        modal.classList.remove('active');
+        document.body.style.overflow = 'auto'; // Restore scrolling
+    }
+
+    modalClose.addEventListener('click', closeModal);
+
+    // Close modal when clicking outside the image
+    modal.addEventListener('click', function(e) {
+        if (e.target === modal) {
+            closeModal();
+        }
+    });
+
+    // Close modal with Escape key
+    document.addEventListener('keydown', function(e) {
+        if (e.key === 'Escape' && modal.classList.contains('active')) {
+            closeModal();
+        }
     });
     
     // Floating animation for job cards in hero section
