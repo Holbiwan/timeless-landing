@@ -245,7 +245,7 @@ h4 { font-size: 1.5rem; }
   display: block;
   font-size: 2rem;
   font-weight: 700;
-  color: var(--bright-yellow);
+  color: #000000;
 }
 
 .stat-label {
