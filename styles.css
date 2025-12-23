@@ -526,8 +526,9 @@ h4 { font-size: 1.5rem; }
 
 .about-gif {
   width: 100%;
-  height: 400px;
-  object-fit: cover;
+  max-width: 500px;
+  height: auto;
+  object-fit: contain;
   border-radius: 12px;
   box-shadow: var(--shadow-lg);
   transition: transform 0.3s ease;
@@ -695,12 +696,12 @@ h4 { font-size: 1.5rem; }
 .contact-item i {
   width: 50px;
   height: 50px;
-  background: var(--gradient-primary);
+  background: transparent;
   border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
-  color: var(--white);
+  color: var(--royal-blue);
   font-size: 1.2rem;
   flex-shrink: 0;
 }
@@ -911,6 +912,16 @@ h4 { font-size: 1.5rem; }
     grid-template-columns: 1fr;
     gap: 2rem;
   }
+
+  .about-content {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+  
+  .about-gif {
+    max-width: 400px;
+    margin: 0 auto;
+  }
 }
 
 @media (max-width: 480px) {
@@ -942,6 +953,11 @@ h4 { font-size: 1.5rem; }
   .floating-cards {
     display: none;
   }
+  
+  .about-gif {
+    max-width: 300px;
+    margin: 0 auto;
+  }
 }
 
 /* Mobile landscape orientation */
@@ -971,6 +987,11 @@ h4 { font-size: 1.5rem; }
   
   .hero-stats {
     gap: 0.4rem;
+  }
+  
+  .about-gif {
+    max-width: 280px;
+    margin: 0 auto;
   }
 }
 
