@@ -8,10 +8,14 @@
 </p>
 
 
-## 🎬 Demo (click on image below)
+## 🎬 Demo
 
-<p align="center">
-  <a href="https://drive.google.com/file/d/1rluLEb_Vo9qcsesfhSVJpYSz6heZSxV8/view?usp=sharing" target="_blank">
-    <img src="assets/screenshots/Dashboard.png" width="240" alt="Demo thumbnail">
-  </a>
-</p>
+<div align="center">
+
+### 📹 Watch the Application in Action
+
+[![Demo Video](https://img.shields.io/badge/▶️_Download_&_Watch_Demo_Video-02569B?style=for-the-badge&logo=playstation&logoColor=white)](https://github.com/Holbiwan/timeless/releases/download/v1.0-demo/Timeless.demo.mp4)
+
+*Experience the complete user journey for both candidates and employers*
+
+</div>
